@@ -1,4 +1,4 @@
-# Lightweight speaker anonymization [IEEE SLT2021]
+# Forked from Lightweight speaker anonymization [IEEE SLT2021]
 This recipe optimizes parameters of voice modification modules `M(*)` for speaker anonymization. Given training data (speech, text, speaker label), this recipe estimates the parameters that minimize `I_obj` consisting of WER (word error rate) and negative EER (equal error rate). 
 
 ![flow](flow.png)
@@ -14,7 +14,7 @@ This recipe optimizes parameters of voice modification modules `M(*)` for speake
 - audiotsm
 - scipy
 
-## Anonymization using pre-optimized parameters
+## Anonymization using pre-optimized parameters (with additional instructions)
 You can anonymize speech using pre-optimized model parameters. For example,
 ```
 python scripts/anonymize.py params/vctk/male/R.json      # resampling only
@@ -26,9 +26,9 @@ This script loads `data/vctk/p227_001.wav` and saves the anonymized speech to `a
 - gender: male or female
 - method: modification method. VLTN (V), resampling (R), McAdams (M), MS (MS smoothing), CL (clipping), CH (chorus).
 
-We recommend to use `*/*/R.json`. See reference for details. 
+To process new audio files, modify the data loading directory and output file name in the anonymize.py file. ({fn_wav} and {fn_wav_out}) (there is no restriction on the format, in a word, it works with FLAC, MP3 with no additional changes other than the output file name)
 
-## Optimization
+## Optimization (not necessary)
 You can optimize model parameters using your own ASR (automatic speech recognition), ASV (automatic speaker verification), and training data (speech, text, speaker label). 
 ```
 python scripts/optimize.py
