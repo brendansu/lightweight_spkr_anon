@@ -26,7 +26,7 @@ This script loads `data/vctk/p227_001.wav` and saves the anonymized speech to `a
 - gender: male or female
 - method: modification method. VLTN (V), resampling (R), McAdams (M), MS (MS smoothing), CL (clipping), CH (chorus).
 
-To process new audio files, modify the data loading directory and output file name in the anonymize.py file. (`fn_wav` and `fn_wav_out`) (there is no restriction on the format, in a word, it works with FLAC, MP3 with no additional changes other than the output file name)
+To process new audio files, modify the data loading directory and output file name in the `anonymize.py` file. (`fn_wav` and `fn_wav_out`) (there is no restriction on the format, in a word, it works with FLAC, MP3 with no additional changes other than the output file name)
 
 ## Optimization (not necessary)
 You can optimize model parameters using your own ASR (automatic speech recognition), ASV (automatic speaker verification), and training data (speech, text, speaker label). 
