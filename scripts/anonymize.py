@@ -16,7 +16,7 @@ if __name__ == "__main__":
   print("Anonymization: {}---{}-->{}".format(fn_wav, fn_model, fn_wav_out))
 
   # load wav
-  x = librosa.load(fn_wav, fs)[0]
+  x = librosa.load(fn_wav)[0]
 
   # load model parameters
   params = json.load(open(fn_model, "r"))
