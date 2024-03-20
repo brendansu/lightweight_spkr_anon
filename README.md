@@ -1,4 +1,4 @@
-# Forked from Lightweight speaker anonymization [IEEE SLT2021]
+# Forked from {sarulab-speech}'s Lightweight speaker anonymization [IEEE SLT2021]
 This recipe optimizes parameters of voice modification modules `M(*)` for speaker anonymization. Given training data (speech, text, speaker label), this recipe estimates the parameters that minimize `I_obj` consisting of WER (word error rate) and negative EER (equal error rate). 
 
 ![flow](flow.png)
